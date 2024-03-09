@@ -1,0 +1,26 @@
+{
+  "array": {
+    "twosum": {
+      "name": "Two Sum",
+      "description": "Given an array A[] of n numbers and another number x, the task is to check whether or not there exist two elements in A[] whose sum is exactly x.",
+      "timecomplexity": "O(N+M) , Traversing over the array of size N and Checking for remainders till M",
+      "spacecomplexity": " O(X), Space for storing remainders",
+      "languages": {
+        "python": " def chkPair(A, size, x):\r\n    for i in range(0, size - 1):\r\n        for j in range(i + 1, size):\r\n            if (A[i] + A[j] == x):\r\n                return 1\r\n    return 0\r\nif __name__ == \"__main__\":\r\n    A = [0, -1, 2, -3, 1]\r\n    x = -2\r\n    size = len(A)\r\n    if (chkPair(A, size, x)):\r\n        print(\"Yes\")\r\n    else:\r\n        print(\"No\")",
+        "js": "{\r\n  for (i = 0; i < size - 1; i++) {\r\n    for (j = i + 1; j < size; j++) {\r\n      if (A[i] + A[j] == x) {\r\n        document.write(\r\n          \"Pair with a given sum \" + x + \" is (\" + A[i] + \", \" + A[j] + \")\"\r\n        );\r\n        return true;\r\n      }\r\n    }\r\n  }\r\n  return false;\r\n}\r\nlet A = [0, -1, 2, -3, 1];\r\nlet x = -2;\r\nlet size = A.length;\r\n\r\nif (chkPair(A, size, x)) {\r\n  document.write(\"<br/>Valid pair exists\");\r\n} else {\r\n  document.write(\"<br/>No valid pair exists for \" + x);\r\n}"
+      }
+    }
+  },
+  "linkedlists": {
+    "reverse": {
+      "name": "Reverse a Linked List",
+      "description": "Given a pointer to the head node of a linked list, the task is to reverse the linked list. We need to reverse the list by changing the links between nodes.",
+      "timecomplexity": ": O(N), Visiting every node of the linked list of size N.",
+      "spacecomplexity": "O(N), Space is used to store the nodes in the stack",
+      "languages": {
+        "python": "def reverseList(self, head):\r\n    new_list = None\r\n    current = head\r\n    while current:\r\n        next_node = current.next\r\n        current.next = new_list\r\n        new_list = current\r\n        current = next_node\r\n    return new_list",
+        "js": "function reverse(node) {\r\n  var prev = null;\r\n  var current = node;\r\n  var next = null;\r\n  while (current != null) {\r\n    next = current.next;\r\n    current.next = prev;\r\n    prev = current;\r\n    current = next;\r\n  }\r\n  node = prev;\r\n  return node;\r\n}"
+      }
+    }
+  }
+}
